@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="page">
   <head>
     <meta charset="UTF-8" />
     <meta
@@ -9,11 +9,213 @@
     <title>Title</title>
     <link
       rel="stylesheet"
-      href="./styles/main.scss"
+      href="./styles/main.css"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
     />
   </head>
-  <body>
-    <h1>Hello Mate Academy</h1>
+  <body class="body">
+    <header class="header">
+      <div class="container">
+        <div class="top-bar">
+          <div class="top-bar__left">
+            <a href="#" class="top-bar__logo"></a>
+
+            <button class="top-bar__lang">En</button>
+          </div>
+
+
+          <div class="top-bar__menu">
+            <nav class="top-bar__nav nav">
+              <ul class="nav__list">
+                <li class="nav__item">
+                  <a href="#" class="nav__link">About</a>
+                </li>
+
+                <li class="nav__item">
+                  <a href="#" class="nav__link">Tech</a>
+                </li>
+
+                <li class="nav__item">
+                  <a href="#" class="nav__link">Benefits</a>
+                </li>
+
+                <li class="nav__item">
+                  <a href="#" class="nav__link">Contacts</a>
+                </li>
+              </ul>
+            </nav>
+
+            <a href="#" class="top-bar__btn-buy button">Buy Now</a>
+          </div>
+
+
+          <img src="./images/icons/menu.svg" alt="Menu" class="top-bar__burger-menu">
+        </div>
+
+        <div class="header__hero">
+          <div class="header__visual">
+            <picture>
+              <source media="(min-width: 768px)" srcset="images/header/first-tb.png">
+              <source media="(min-width: 1280px)" srcset="images/header/first-dk.png">
+              <img src="./images/header/first-mb.png" alt="KAT" class="header__image">
+            </picture>
+          </div>
+
+          <div class="header__content">
+            <h1 class="header__title">
+              <span>THE NEW START OF</span>
+              <br>
+              <span class="accent">VR LOCOMOTION</span>
+            </h1>
+
+            <div class="header__info">
+              <p class="header__text">
+                Discover the most comprehensive VR Locomotion system, and unlock infinite motion in any games on any platforms!
+              </p>
+
+              <p class="header__price">
+                1200$
+              </p>
+
+              <a href="#" class="header__play-btn play-button"></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="header__bottom">
+          <div class="header__help">
+            <a href="#" class="header__faq-btn">FAQ</a>
+            <a href="#" class="header__help-btn">Help</a>
+          </div>
+
+          <div class="header__more">
+            <a href="#" class="header__more-btn">More</a>
+          </div>
+
+          <div class="slider__buttons">
+            <a href="#" class="slider__buttons-prev">Previous</a>
+            <a href="#" class="slider__buttons-next">Next</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="gaming">
+        <div class="container">
+          <div class="gaming__content">
+            <div class="gaming__wrapper-title">
+              <h2 class="gaming__title">
+                <span>MORE THAN</span><span class="accent">GAMING!</span>
+              </h2>
+
+              <p class="gaming__subtitle text-second">
+                This also made for people who are interested in...
+              </p>
+            </div>
+
+            <div class="gaming__articles">
+              <article class="article gaming__article">
+                <img src="./images/gaming/education.svg" alt="Education" class="article__img">
+                <h3 class="article__title">EDUCATION</h3>
+                <p class="article__subtitle">
+                  Create aducational simulations, trainings and much more with unlimited virtual space and minimum physical space
+                </p>
+              </article>
+
+              <article class="article gaming__article">
+                <img src="./images/gaming/estate.svg" alt="Real estate" class="article__img">
+                <h3 class="article__title">REAL ESTATE</h3>
+                <p class="article__subtitle">
+                  Desighn architectural projects in a deeply realistic environment allowing visitors to freely walk around, and feel their
+                  vibe
+                </p>
+              </article>
+
+              <article class="article gaming__article">
+                <img src="./images/gaming/fitnes.svg" alt="Fitnes" class="article__img">
+                <h3 class="article__title">FITNESS</h3>
+                <p class="article__subtitle">
+                  Combine business with pleasure, and discover countless ways to stay fit while playing your favorite VR Games!
+                </p>
+              </article>
+
+              <article class="article gaming__article">
+                <img src="./images/gaming/network.svg" alt="Network" class="article__img">
+                <h3 class="article__title">SOCIAL INTERACTIONS</h3>
+                <p class="article__subtitle">
+                  Hang out with your friends in the virtual world when you can’t meet space requirements
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about">
+        <div class=" about__container container">
+          <div class="about__top">
+            <h2 class="about__title">
+              <span>ABOUT</span><span class="accent">PRODUCT</span>
+            </h2>
+
+            <picture class="about__wrapper-img">
+              <source media="(min-width: 1280px)" srcset="images/about/man-dk.png">
+              <source media="(min-width: 768px)" srcset="images/about/man-tb.png">
+              <img src="./images/about/man-mb.png" alt="Kate VR" class="about__img">
+            </picture>
+
+            <p class="about__text">
+              KAT loco is a foot-based VR locomotion system that gives complete physical control over lower-body actions, allowing you
+              to freely walk, run, and carry out just any other movement in virtual reality.
+            </p>
+
+            <a href="#" class="about__play-btn play-button"></a>
+          </div>
+
+          <div class="about__bottom">
+            <div class="about__greeting">
+              <p class="about__subtitle text-second">Hello,</p>
+
+              <h2 class="about__title">
+                <span>NICE TO MEET</span><span class="accent">YOU!</span>
+              </h2>
+
+              <p class="about__text">
+                KAT VR is an independent company dedicated to the research, development, and sales of VR Locomotion products and
+                solutions. Founded in 2013, we have quickly grown to become one of the world’s leading professional suppliers of VR
+                games’ & simulations’ equipment
+              </p>
+            </div>
+
+            <picture class="about__wrapper-about">
+              <img src="./images/about/about-us.png" alt="About-us" class="about__img">
+            </picture>
+          </div>
+        </div>
+      </section>
+
+      <section class="tech">
+        <div class="container">
+          <h1 class="tech__title">
+            <span>TECH</span><span class="accent">SPECS</span>
+          </h1>
+        </div>
+      </section>
+    </main>
+
     <script src="scripts/main.js"></script>
   </body>
 </html>

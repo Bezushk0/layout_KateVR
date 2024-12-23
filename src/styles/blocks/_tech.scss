@@ -1,0 +1,17 @@
+.tech {
+  background-color: $c-bg-black;
+
+  padding-block: 50px;
+
+  @include on-tablet {
+    padding-block: 80px;
+  }
+
+  @include on-small-desktop {
+    padding-block: 100px;
+  }
+
+  @include on-desktop {
+    padding-block: 160px;
+  }
+}
