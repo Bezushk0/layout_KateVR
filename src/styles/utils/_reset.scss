@@ -91,7 +91,9 @@ body {
 
 button {
   all: unset;
+  cursor: pointer;
 }
+
 
 ol,
 ul,
@@ -101,6 +103,6 @@ li {
 
 a {
   text-decoration: none;
-
+  cursor: pointer;
 }
 

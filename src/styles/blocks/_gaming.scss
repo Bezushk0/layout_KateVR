@@ -1,18 +1,7 @@
 .gaming {
   background-color: $c-bg-black;
-  padding-block: 50px;
 
-  @include on-tablet {
-    padding-block: 70px;
-  }
-
-  @include on-small-desktop {
-    padding-block: 100px;
-  }
-
-  @include on-desktop {
-    padding-block: 158px;
-  }
+  @include section-padding-block;
 
   &__content {
     text-align: center;
@@ -57,41 +46,3 @@
   }
 }
 
-.article {
-  border-radius: 10px;
-  padding: 5px;
-  transition:
-    box-shadow .3s,
-    transform .3s;
-
-  &:hover {
-    box-shadow: 0 0 10px $c-contrast;
-  }
-
-  &__img {
-    display: none;
-
-    @include on-tablet {
-      display: inline-block;
-      margin-bottom: 30px;
-    }
-  }
-
-  &__title {
-    margin-bottom: 11px;
-    text-align: left;
-
-    @include on-tablet {
-      text-align: center;
-      margin-bottom: 18px;
-    }
-  }
-
-  &__subtitle {
-    text-align: left;
-
-    @include on-tablet {
-      text-align: center;
-    }
-  }
-}

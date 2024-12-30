@@ -1,6 +1,7 @@
 .about {
   background: $c-bg-gradient;
-  padding-block: 50px;
+
+  @include section-padding-block;
 
   @include on-tablet {
     padding-block: 70px 50px;
@@ -11,7 +12,7 @@
   }
 
   @include on-desktop {
-    padding-block: 147px 156px;
+    padding-block: 160px;
   }
 
   &__container {
@@ -36,15 +37,16 @@
   &__top {
     @include page-grid;
 
-    @include on-tablet {
+    row-gap: 20px;
 
+    @include on-tablet {
+      row-gap: 0;
     }
   }
 
 
   &__wrapper-img {
     grid-column: 1 / -1;
-    margin-bottom: 20px;
 
     @include on-tablet {
       margin-bottom: 0;
@@ -72,10 +74,10 @@
 
   &__title {
     grid-column: 1 / -1;
-    margin-bottom: 20px;
 
     @include on-tablet {
       grid-area: 1 / 4 / 2 / 7;
+      margin-bottom: 20px;
     }
 
     @include on-small-desktop {
@@ -89,7 +91,6 @@
 
   &__text {
     grid-column: 1 / -1;
-    margin-bottom: 15px;
 
     @include on-tablet {
       grid-area: 2 / 4 / 3 / 7;
@@ -150,7 +151,7 @@
 
     @include on-tablet {
       display: block;
-      width: 100%; /* Или фиксированная ширина, если требуется */
+      width: 100%;
       height: 100%;
 
       min-height: 256px;
@@ -169,5 +170,53 @@
 
   &__subtitle {
     margin-bottom: 11px;
+  }
+
+  &__visual {
+    position: relative;
+  }
+
+  &__navigation {
+    display: none;
+
+    @include on-small-desktop {
+      display: block;
+      margin-top: 12px;
+    }
+  }
+
+  & &__fraction {
+    display: none;
+
+    @include on-small-desktop {
+      --swiper-pagination-fraction-color: #{$c-contrast};
+      --swiper-pagination-top: 0;
+      --swiper-pagination-bottom: auto;
+      --swiper-pagination-left: 0;
+
+      display: block;
+      transform: translate(calc(-100% - 20px));
+      width: fit-content;
+      font-size: 14px;
+      line-height: 17px;
+      letter-spacing: -1px;
+    }
+  }
+
+  & &__bullets {
+    --swiper-pagination-bottom: 0;
+    --swiper-pagination-color: #ababab;
+    --swiper-pagination-bullet-inactive-color: #484848;
+    --swiper-pagination-bullet-horizontal-gap: 3px;
+    --swiper-pagination-bullet-size: 4px;
+    --swiper-pagination-bullet-height: 4px;
+
+    transform: translateY(20px);
+    font-size: 4px;
+    line-height: 1;
+
+    @include on-small-desktop {
+      display: none;
+    }
   }
 }

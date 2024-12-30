@@ -54,12 +54,34 @@
     @include on-desktop {
       grid-column: span 10;
     }
+
+    display: block;
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    min-width: 320px;
+
+    @include on-tablet {
+      position: absolute;
+      object-fit: contain;
+      object-position: bottom right;
+      width: 65vw;
+      height: 100%;
+      right: 0;
+      top: 0;
+    }
+
+    @include on-desktop {
+      width: 1104px;
+      height: 595px;
+      object-fit: cover;
+      object-position: center;
+    }
   }
 
   &__image {
     display: block;
     width: calc(100% + 40px);
-    margin-left: -20px;
+
     min-width: 320px;
     height: auto;
 
@@ -142,7 +164,32 @@
     gap: 39px;
   }
 
-  &__more-btn {
-    color: $c-contrast;
+  &__faq-btn,
+  &__help-btn {
+    @include hover (color, $c-contrast)
+  }
+
+  &__img-mb {
+    @include on-small-desktop {
+      display: none;
+    }
+  }
+
+  &__swiper {
+    display: none !important;
+
+    @include on-small-desktop {
+      display: block !important;
+      position: absolute;
+      right: 0;
+      height: 54vh;
+      min-height: 430px;
+      max-height: 700px;
+      width: 115%;
+    }
+
+    @include on-desktop {
+      width: 125%;
+    }
   }
 }
