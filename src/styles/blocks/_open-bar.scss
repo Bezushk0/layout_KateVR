@@ -1,8 +1,4 @@
 .open-bar {
-  &__top {
-
-  }
-
   &--active {
     z-index: 1;
   }
@@ -15,20 +11,14 @@
     background-repeat: no-repeat;
     background-size: cover;
 
-    @include hover (
-      background-image,
-      url('../images/tech/hove-bar-mb.svg')
-    );
+    @include hover(background-image, url('../images/tech/hove-bar-mb.svg'));
 
     @include on-tablet {
       width: 61.68px;
       height: 61.68px;
       background-image: url('../images/tech/open-bar-tb.svg');
 
-      @include hover (
-        background-image,
-        url('../images/tech/hove-bar.svg')
-      );
+      @include hover(background-image, url('../images/tech/hove-bar.svg'));
     }
 
     &--active {
@@ -42,14 +32,12 @@
   }
 
   &__content {
-
-
     display: grid;
     grid-template-rows: 0fr;
-    width: max-content;
     transition: grid-template-rows $hover-duration;
     background-color: $bg-menu;
     border-radius: 4px;
+    width: 170px;
 
     @include on-tablet {
       width: max-content;
@@ -63,10 +51,7 @@
   &:is(&--active) &__circle {
     background-image: url('../images/tech/close-bar.svg');
 
-    @include hover(
-      background-image,
-      url('../images/tech/close-bar-hove.svg')
-    );
+    @include hover(background-image, url('../images/tech/close-bar-hove.svg'));
   }
 
   &__content-wrapper {

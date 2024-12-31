@@ -1,6 +1,6 @@
 .main {
   background: #050505;
-  
+
   &__buy {
     display: block;
     position: sticky;
@@ -15,7 +15,7 @@
 
 .buy {
   padding-block: 30px;
-  background: linear-gradient(#00000036 0%,#04040496 23.44%,#050505 100%);
+  background: linear-gradient(#00000036 0%, #04040496 23.44%, #050505 100%);
 
   &__wrapper {
     display: flex;

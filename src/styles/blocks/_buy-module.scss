@@ -9,18 +9,8 @@
   background: $c-bg-gradient;
   overflow-y: auto;
 
-
   &__content {
     width: 100%;
-
-    @include on-desktop {
-
-    }
-  }
-
-  &__wrapper {
-    @include on-desktop {
-    }
   }
 
   &__visual {
@@ -37,12 +27,10 @@
       grid-column: 1 / 6;
 
       display: flex;
-      justify-content: center; /* Центрируем по горизонтали */
-      align-items: flex-end; /* Притягиваем к нижней части */
+      justify-content: center;
+      align-items: flex-end;
       height: 100%;
     }
-
-
   }
 
   &__close {
@@ -60,10 +48,18 @@
     justify-content: space-between;
     align-items: center;
     padding-block: 20px 33px;
+
+    @include on-small-desktop {
+      margin-bottom: 102px;
+    }
+
+    @include on-desktop {
+      margin-bottom: 220px;
+    }
   }
 
   &__logo {
-    @include hover (transform, scale(1.1));
+    @include hover(transform, scale(1.1));
   }
 
   &__orders {
@@ -72,11 +68,18 @@
     margin-bottom: 30px;
 
     @include on-small-desktop {
-      margin-bottom: 102px;
+      display: none;
     }
+  }
 
-    @include on-desktop {
-      margin-bottom: 220px;
+  &__orders-bar {
+    display: none;
+
+    @include on-small-desktop {
+      display: block;
+      display: flex;
+      justify-content: space-between;
+      gap: 192px;
     }
   }
 
@@ -94,12 +97,35 @@
     }
   }
 
+  &__order-bar {
+    font-size: 14px;
+
+    &--active {
+      color: $c-contrast;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        background-color: $c-contrast;
+        left: 50%;
+        bottom: -7px;
+        border-radius: 50%;
+        display: block;
+      }
+    }
+  }
+
   &__btn {
     width: 100%;
     margin-top: 40px;
+  }
 
+  &__container {
     @include on-tablet {
-
+      overflow: unset;
     }
   }
 }
@@ -129,7 +155,6 @@
 
   grid-column: 1 / 4;
 
-
   &__qty {
     text-align: center;
   }
@@ -140,7 +165,7 @@
     gap: 75px;
 
     @include on-tablet {
-      justify-content: space-between
+      justify-content: space-between;
     }
 
     &-title {
@@ -165,6 +190,3 @@
     }
   }
 }
-
-
-

@@ -132,7 +132,6 @@
     position: absolute;
     display: flex;
 
-
     @include on-small-desktop {
       display: none;
     }
@@ -168,10 +167,12 @@
       top: 90%;
       left: 0%;
       transform: translate(0, -100%);
+    }
+  }
 
-      @include on-tablet {
-
-      }
+  &__container {
+    @include on-small-desktop {
+      overflow: unset;
     }
   }
 }

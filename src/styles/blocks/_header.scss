@@ -33,7 +33,6 @@
     @include on-small-desktop {
       grid-column: 1 / 7;
       margin-bottom: 84px;
-
     }
 
     @include on-small-desktop {
@@ -166,7 +165,7 @@
 
   &__faq-btn,
   &__help-btn {
-    @include hover (color, $c-contrast)
+    @include hover(color, $c-contrast);
   }
 
   &__img-mb {

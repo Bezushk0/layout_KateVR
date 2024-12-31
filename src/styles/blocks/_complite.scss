@@ -5,6 +5,7 @@
   text-align: center;
 
   &__title {
+    text-transform: uppercase;
     grid-column: 1 / -1;
 
     @include on-tablet {
@@ -14,7 +15,6 @@
     @include on-small-desktop {
       font-size: 46px;
       grid-column: 2 / -2;
-
     }
   }
 
@@ -24,7 +24,19 @@
 
     @include on-small-desktop {
       grid-column: 2 / -2;
+    }
+  }
 
+  &__button {
+    grid-column: 1 / -1;
+
+    @include on-tablet {
+      grid-column: 2 / -2;
+    }
+
+    @include on-small-desktop {
+      width: 218px;
+      justify-self: center;
     }
   }
 }

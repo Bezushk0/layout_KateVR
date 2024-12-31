@@ -33,7 +33,6 @@
     }
   }
 
-  //top of about
   &__top {
     @include page-grid;
 
@@ -43,7 +42,6 @@
       row-gap: 0;
     }
   }
-
 
   &__wrapper-img {
     grid-column: 1 / -1;
@@ -122,8 +120,6 @@
     }
   }
 
-
-  //bottom of about
   &__bottom {
     @include page-grid;
 

@@ -1,37 +1,16 @@
 export const setupQuantitySelect = () => {
-  const orderPlace = document.getElementById('order-place');
-
-  const setupSelect = (selectElement) => {
-    const currentValue = selectElement.querySelector('.select__current-value');
-    const listWrapper = selectElement.querySelector('.select__list-wrapper');
-    const items = Array.from(listWrapper.querySelectorAll('.select__item'));
-
-    selectElement.addEventListener('click', () => {
-      listWrapper.classList.toggle('select__list-wrapper--visible');
-    });
-
-    listWrapper.addEventListener('click', (event) => {
-      const li = event.target.closest('.select__item');
-
-      if (!li) return;
-
-      const selectedValue = li.textContent.trim();
-      currentValue.textContent = selectedValue;
-
-      const selectedLi = selectElement.querySelector('.select__item--selected');
-      selectedLi?.classList.remove('select__item--selected');
-      li.classList.add('select__item--selected');
-
-      listWrapper.classList.remove('select__list-wrapper--visible');
-    });
-  };
+  const orders = document.querySelectorAll('.buy-module__step');
 
   const setupQuantity = (orderElement) => {
+    if (!orderElement) return;
+
     const price = orderElement.querySelector('.order__price-count');
     const qtySelect = orderElement.querySelector('.select-qty');
-    const qtySelectValue = qtySelect.querySelector('.select-qty__current-value');
-    const qtySelectList = qtySelect.querySelector('.select-qty__list-wrapper');
-    const qtyItems = Array.from(qtySelectList.querySelectorAll('.select-qty__item'));
+    const qtySelectValue = qtySelect?.querySelector('.select-qty__current-value');
+    const qtySelectList = qtySelect?.querySelector('.select-qty__list-wrapper');
+    const qtyItems = Array.from(qtySelectList?.querySelectorAll('.select-qty__item') || []);
+
+    if (!price || !qtySelect || !qtySelectValue || !qtySelectList) return;
 
     qtySelect.addEventListener('click', () => {
       const selectedValue = qtySelectValue.textContent.trim();
@@ -57,10 +36,5 @@ export const setupQuantitySelect = () => {
     });
   };
 
-  // Настройка выбора количества
-  setupQuantity(orderPlace);
-
-  // Настройка всех выпадающих списков
-  const selects = document.querySelectorAll('.select');
-  selects.forEach(setupSelect);
+  orders.forEach(setupQuantity);
 };

@@ -17,6 +17,7 @@
 
   &__link-close {
     margin-left: auto;
+
     @include hover(transform, scale(1.1));
   }
 
@@ -68,7 +69,7 @@
       left: -20vw;
     }
 
-    @include hover (background-color, $bg-menu-link);
+    @include hover(background-color, $bg-menu-link);
 
     &-text {
       position: relative;
@@ -81,11 +82,15 @@
       font-weight: 500;
       color: $c-white;
 
-      @include hover (color, $c-contrast);
+      @include hover(color, $c-contrast);
 
       @include on-tablet {
         left: 20vw;
       }
     }
   }
+}
+
+.hidden {
+  display: none;
 }

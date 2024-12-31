@@ -5,9 +5,15 @@ export const setupBuyToggle = () => {
   const closeHelpBtn = document.querySelector('.buy-module__close');
   const openBuyBtns = document.querySelectorAll('.buy-btn');
   const orders = document.querySelectorAll('.buy-module__order');
+  const orderBars = document.querySelectorAll('.buy-module__order-bar');
   const steps = document.querySelectorAll('.buy-module__step');
   const nextBtn = document.querySelector('.buy-module__btn');
   const frm = document.forms['contact__form-buy'];
+
+  const homeButton = document.querySelector(".complite__button");
+  const payButton = document.querySelector(".pay-order__button");
+  const stepPay = document.querySelector(".buy-module__step--pay");
+  const stepComplete = document.querySelector(".buy-module__step--complete");
 
   let currentStep = 0;
 
@@ -16,11 +22,13 @@ export const setupBuyToggle = () => {
       order.classList.toggle('buy-module__order--active', index === currentStep);
     });
 
+    orderBars.forEach((orderBar, index) => {
+      orderBar.classList.toggle('buy-module__order-bar--active', index === currentStep);
+    });
+
     steps.forEach((step, index) => {
       step.classList.toggle('active', index === currentStep);
     });
-
-    nextBtn.textContent = currentStep === steps.length - 1 ? 'Back to homepage' : 'Purchase';
   };
 
   const validateForm = () => {
@@ -71,7 +79,7 @@ export const setupBuyToggle = () => {
       return;
     }
 
-    if (currentStep < steps.length - 1) {
+    if (currentStep < steps.length) {
       currentStep++;
       updateUI();
     } else {
@@ -82,7 +90,18 @@ export const setupBuyToggle = () => {
   nextBtn.addEventListener('click', handleNextStep);
   updateUI();
 
-  //top-bar
+  payButton.addEventListener("click", () => {
+    stepPay.classList.remove("active");
+    stepComplete.classList.add("active");
+    currentStep = steps.length - 1;
+    updateUI();
+  });
+
+  homeButton.addEventListener("click", () => {
+    window.location.href = 'index.html';
+  });
+
+  // top-bar
   const closeHelp = () => buy?.classList.remove('page__aside--active');
   const openHelp = () => buy?.classList.add('page__aside--active');
 
@@ -92,5 +111,3 @@ export const setupBuyToggle = () => {
 
   helpServiceBtn.forEach(btn => btn.addEventListener('click', closeHelp));
 };
-
-

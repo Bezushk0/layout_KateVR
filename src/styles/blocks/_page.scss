@@ -1,13 +1,16 @@
 .page {
   scroll-behavior: smooth;
   transition: all 0.3s;
-
-  &:has(.page__menu:target) {
-    overflow: hidden;
-  }
+  overflow-x: hidden;
+  box-sizing: border-box;
+  position: relative;
 
   &:has(body aside[class*='--active']) {
     overflow-y: hidden;
+  }
+
+  &:has(.page__menu:target) {
+    overflow: hidden;
   }
 
   &__aside {

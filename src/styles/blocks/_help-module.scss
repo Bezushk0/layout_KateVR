@@ -58,7 +58,6 @@
 
     @include on-desktop {
       grid-column: 2 / span 10;
-
     }
   }
 
@@ -71,7 +70,6 @@
     justify-content: space-between;
     gap: 30px;
 
-
     @include on-desktop {
       grid-column: 2 / span 10;
       margin-bottom: 30px;
@@ -82,6 +80,18 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
+
+    grid-column: 1 / -1;
+
+    @include on-tablet {
+      grid-column: 1 / -1;
+    }
+
+    & a {
+      color: $c-contrast;
+
+      @include hover(color, $c-white);
+    }
   }
 
   &__service-btn {
@@ -97,21 +107,6 @@
     column-gap: 20px;
   }
 
-
-  &__text {
-    grid-column: 1 / -1;
-
-    @include on-tablet {
-      grid-column: 1 / -1;
-    }
-
-    & a {
-      color: $c-contrast;
-
-      @include hover (color, $c-white)
-    }
-  }
-
   &__support {
     display: flex;
     flex-direction: column;
@@ -121,7 +116,7 @@
     & a {
       color: $c-contrast;
 
-      @include hover (color, $c-white)
+      @include hover(color, $c-white);
     }
   }
 
@@ -135,6 +130,6 @@
   &__detail {
     color: $c-text;
 
-    @include hover (color, $c-white)
+    @include hover(color, $c-white);
   }
 }

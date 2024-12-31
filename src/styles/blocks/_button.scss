@@ -10,9 +10,9 @@
   }
 
   &:hover {
-    @include hover (color, $c-contrast);
-    @include hover (background-color, $c-white);
-    @include hover (box-shadow,0 0 15px $c-white);
+    @include hover(color, $c-contrast);
+    @include hover(background-color, $c-white);
+    @include hover(box-shadow, 0 0 15px $c-white);
   }
 
   &:active {

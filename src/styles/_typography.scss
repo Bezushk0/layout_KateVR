@@ -37,3 +37,11 @@ a {
   color: $c-white;
   font-size: 16px;
 }
+
+.container {
+  overflow: hidden;
+
+  @include on-tablet {
+    overflow: unset;
+  }
+}

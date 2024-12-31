@@ -2,8 +2,8 @@
   border-radius: 10px;
   padding: 5px;
   transition:
-    box-shadow .3s,
-    transform .3s;
+    box-shadow 0.3s,
+    transform 0.3s;
 
   &:hover {
     box-shadow: 0 0 10px $c-contrast;

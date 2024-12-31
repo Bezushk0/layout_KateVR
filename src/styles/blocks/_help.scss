@@ -1,5 +1,6 @@
 .help {
   @include page-grid;
+
   row-gap: 30px;
 
   &__title {
@@ -20,7 +21,7 @@
     & a {
       color: $c-contrast;
 
-      @include hover (color, $c-white)
+      @include hover(color, $c-white);
     }
   }
 
@@ -37,7 +38,7 @@
     & a {
       color: $c-contrast;
 
-      @include hover (color, $c-white)
+      @include hover(color, $c-white);
     }
   }
 
@@ -55,6 +56,6 @@
   &__detail {
     color: $c-text;
 
-    @include hover (color, $c-white)
+    @include hover(color, $c-white);
   }
 }

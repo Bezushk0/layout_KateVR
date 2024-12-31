@@ -6,7 +6,7 @@
   box-sizing: border-box;
   cursor: pointer;
 
-  @include hover (box-shadow,0 0 5px $c-white);
+  @include hover(box-shadow, 0 0 5px $c-white);
 
   &__content {
     display: grid;
@@ -60,6 +60,7 @@
     margin-bottom: 6px;
   }
 }
+
 .accordion--open .accordion__content-wrapper {
   max-height: 1000px;
 }

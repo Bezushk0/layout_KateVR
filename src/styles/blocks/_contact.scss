@@ -79,7 +79,13 @@
     color: $c-text;
 
     &:hover {
-      @include hover (color, $c-white);
+      @include hover(color, $c-white);
+    }
+  }
+
+  &__container {
+    @include on-small-desktop {
+      overflow: unset;
     }
   }
 }

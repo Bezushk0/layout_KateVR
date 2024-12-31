@@ -12,45 +12,22 @@
   &__card-num-inputs-wrapper {
     display: flex;
     justify-content: space-between;
-
-  }
-
-  &__input {
-    box-sizing: border-box;
-    font: inherit;
-    color: $c-white;
-    background-color: #0000;
-    border: none;
-    border-bottom: 1px solid #2f2f2f;
-    outline: none;
-    width: 100%;
-    padding: 0;
-    font-size: 18px;
-    line-height: 23.4px;
-    display: block;
-
-    &:focus {
-      border-color: $c-contrast;
-    }
-
-    &--card-num {
-      letter-spacing: .1em;
-      width: 56px;
-      height: 32px;
-      padding-bottom: 9px;
-    }
-
-
   }
 
   &__label {
     font-size: 14px;
     color: $c-text;
 
-    @include transition (color);
+    @include transition(color);
   }
 
   &__input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0;
+    line-height: 23.4px;
+    display: block;
+
     color: $c-white;
     font-family: $main-ff;
     padding-bottom: 6px;
@@ -61,14 +38,19 @@
     border-bottom: 1px solid $c-dark-grey;
     font-size: 16px;
     resize: none;
-    letter-spacing: .2em;
-
-
+    letter-spacing: 0.2em;
 
     @include transition(border-bottom);
 
     &--expiration-date {
       width: 90px;
+    }
+
+    &--card-num {
+      letter-spacing: 0.1em;
+      width: 56px;
+      height: 32px;
+      padding-bottom: 9px;
     }
 
     &::placeholder {
@@ -87,13 +69,13 @@
 
     &:focus {
       border-bottom: 1px solid $c-contrast;
+      border-color: $c-contrast;
     }
 
     &:disabled {
       cursor: not-allowed;
     }
   }
-
 
   &__holder-name-wrapper,
   &__card-num-wrapper,
@@ -138,7 +120,6 @@
     }
 
     @include on-desktop {
-
       grid-column: 9 / 15;
     }
   }
@@ -184,6 +165,4 @@
       grid-column: 9 / 12;
     }
   }
-
-
 }

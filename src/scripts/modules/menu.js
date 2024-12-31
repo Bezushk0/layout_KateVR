@@ -10,36 +10,36 @@ export const setupMenu = () => {
   const closeIcon = document.querySelector('.menu__link-close');
 
   const resetMenu = () => {
-    langMenu.style.display = 'none';
-    helpMenu.style.display = 'none';
-    faqMenu.style.display = 'none';
-    navMenu.style.display = 'flex';
-    backButton.style.display = 'none';
-    closeIcon.style.display = 'flex';
+    langMenu.classList.add('hidden');
+    helpMenu.classList.add('hidden');
+    faqMenu.classList.add('hidden');
+    navMenu.classList.remove('hidden');
+    backButton.classList.add('hidden');
+    closeIcon.classList.remove('hidden');
     closeIcon.style.order = '1';
   };
 
   window.addEventListener('DOMContentLoaded', resetMenu);
 
   langButton.addEventListener('click', function () {
-    langMenu.style.display = 'block';
-    navMenu.style.display = 'none';
-    closeIcon.style.display = 'none';
-    backButton.style.display = 'block';
+    langMenu.classList.remove('hidden');
+    navMenu.classList.add('hidden');
+    closeIcon.classList.add('hidden');
+    backButton.classList.remove('hidden');
     closeIcon.style.order = '2';
   });
 
   helpButton.addEventListener('click', function () {
-    helpMenu.style.display = 'grid';
-    navMenu.style.display = 'none';
-    backButton.style.display = 'block';
+    helpMenu.classList.remove('hidden');
+    navMenu.classList.add('hidden');
+    backButton.classList.remove('hidden');
     closeIcon.style.order = '2';
   });
 
   faqButton.addEventListener('click', function () {
-    faqMenu.style.display = 'grid';
-    navMenu.style.display = 'none';
-    backButton.style.display = 'block';
+    faqMenu.classList.remove('hidden');
+    navMenu.classList.add('hidden');
+    backButton.classList.remove('hidden');
     closeIcon.style.order = '2';
   });
 

@@ -44,5 +44,8 @@
       grid-column: span 4;
     }
   }
-}
 
+  &__container {
+    overflow: unset;
+  }
+}
